@@ -14,22 +14,25 @@
         to="/subscriptions"
         :title="$t('Subscriptions.Subscriptions')"
       >
-        <div
-          class="thumbnailContainer"
-        >
-          <FontAwesomeIcon
-            :icon="['fas', 'rss']"
-            class="navIcon"
-            :class="applyNavIconExpand"
-            fixed-width
-          />
+        <div class="navContainer">
+          <div
+            class="thumbnailContainer"
+          >
+            <FontAwesomeIcon
+              :icon="['fas', 'rss']"
+              class="navIcon"
+              :class="applyNavIconExpand"
+              fixed-width
+            />
+          </div>
+          <p
+            v-if="!hideText"
+            class="navLabel"
+          >
+            {{ $t("Subscriptions.Subscriptions") }}
+          </p>
+          <div class="navUnderline" />
         </div>
-        <p
-          v-if="!hideText"
-          class="navLabel"
-        >
-          {{ $t("Subscriptions.Subscriptions") }}
-        </p>
       </router-link>
       <router-link
         class="navOption mobileHidden"
@@ -37,22 +40,25 @@
         to="/subscribedchannels"
         :title="$t('Channels.Channels')"
       >
-        <div
-          class="thumbnailContainer"
-        >
-          <FontAwesomeIcon
-            :icon="['fas', 'user-check']"
-            class="navIcon"
-            :class="applyNavIconExpand"
-            fixed-width
-          />
+        <div class="navContainer">
+          <div
+            class="thumbnailContainer"
+          >
+            <FontAwesomeIcon
+              :icon="['fas', 'user-check']"
+              class="navIcon"
+              :class="applyNavIconExpand"
+              fixed-width
+            />
+          </div>
+          <p
+            v-if="!hideText"
+            class="navLabel"
+          >
+            {{ $t("Channels.Channels") }}
+          </p>
+          <div class="navUnderline" />
         </div>
-        <p
-          v-if="!hideText"
-          class="navLabel"
-        >
-          {{ $t("Channels.Channels") }}
-        </p>
       </router-link>
       <router-link
         v-if="!hideTrendingVideos"
@@ -61,22 +67,25 @@
         to="/trending"
         :title="$t('Trending.Trending')"
       >
-        <div
-          class="thumbnailContainer"
-        >
-          <FontAwesomeIcon
-            :icon="['fas', 'fire']"
-            class="navIcon"
-            :class="applyNavIconExpand"
-            fixed-width
-          />
+        <div class="navContainer">
+          <div
+            class="thumbnailContainer"
+          >
+            <FontAwesomeIcon
+              :icon="['fas', 'fire']"
+              class="navIcon"
+              :class="applyNavIconExpand"
+              fixed-width
+            />
+          </div>
+          <p
+            v-if="!hideText"
+            class="navLabel"
+          >
+            {{ $t("Trending.Trending") }}
+          </p>
+          <div class="navUnderline" />
         </div>
-        <p
-          v-if="!hideText"
-          class="navLabel"
-        >
-          {{ $t("Trending.Trending") }}
-        </p>
       </router-link>
       <router-link
         v-if="!hidePopularVideos && (backendFallback || backendPreference === 'invidious')"
@@ -85,22 +94,25 @@
         to="/popular"
         :title="$t('Most Popular')"
       >
-        <div
-          class="thumbnailContainer"
-        >
-          <FontAwesomeIcon
-            :icon="['fas', 'users']"
-            class="navIcon"
-            :class="applyNavIconExpand"
-            fixed-width
-          />
+        <div class="navContainer">
+          <div
+            class="thumbnailContainer"
+          >
+            <FontAwesomeIcon
+              :icon="['fas', 'users']"
+              class="navIcon"
+              :class="applyNavIconExpand"
+              fixed-width
+            />
+          </div>
+          <p
+            v-if="!hideText"
+            class="navLabel"
+          >
+            {{ $t("Most Popular") }}
+          </p>
+          <div class="navUnderline" />
         </div>
-        <p
-          v-if="!hideText"
-          class="navLabel"
-        >
-          {{ $t("Most Popular") }}
-        </p>
       </router-link>
       <router-link
         v-if="!hidePlaylists"
@@ -109,22 +121,25 @@
         to="/userplaylists"
         :title="$t('Playlists')"
       >
-        <div
-          class="thumbnailContainer"
-        >
-          <FontAwesomeIcon
-            :icon="['fas', 'bookmark']"
-            class="navIcon"
-            :class="applyNavIconExpand"
-            fixed-width
-          />
+        <div class="navContainer">
+          <div
+            class="thumbnailContainer"
+          >
+            <FontAwesomeIcon
+              :icon="['fas', 'bookmark']"
+              class="navIcon"
+              :class="applyNavIconExpand"
+              fixed-width
+            />
+          </div>
+          <p
+            v-if="!hideText"
+            class="navLabel"
+          >
+            {{ $t("Playlists") }}
+          </p>
+          <div class="navUnderline" />
         </div>
-        <p
-          v-if="!hideText"
-          class="navLabel"
-        >
-          {{ $t("Playlists") }}
-        </p>
       </router-link>
       <SideNavMoreOptions />
       <router-link
@@ -133,22 +148,25 @@
         to="/history"
         :title="historyTitle"
       >
-        <div
-          class="thumbnailContainer"
-        >
-          <FontAwesomeIcon
-            :icon="['fas', 'history']"
-            class="navIcon"
-            :class="applyNavIconExpand"
-            fixed-width
-          />
+        <div class="navContainer">
+          <div
+            class="thumbnailContainer"
+          >
+            <FontAwesomeIcon
+              :icon="['fas', 'history']"
+              class="navIcon"
+              :class="applyNavIconExpand"
+              fixed-width
+            />
+          </div>
+          <p
+            v-if="!hideText"
+            class="navLabel"
+          >
+            {{ $t("History.History") }}
+          </p>
+          <div class="navUnderline" />
         </div>
-        <p
-          v-if="!hideText"
-          class="navLabel"
-        >
-          {{ $t("History.History") }}
-        </p>
       </router-link>
       <hr>
       <router-link
@@ -157,22 +175,25 @@
         to="/settings"
         :title="settingsTitle"
       >
-        <div
-          class="thumbnailContainer"
-        >
-          <FontAwesomeIcon
-            :icon="['fas', 'sliders-h']"
-            class="navIcon"
-            :class="applyNavIconExpand"
-            fixed-width
-          />
+        <div class="navContainer">
+          <div
+            class="thumbnailContainer"
+          >
+            <FontAwesomeIcon
+              :icon="['fas', 'sliders-h']"
+              class="navIcon"
+              :class="applyNavIconExpand"
+              fixed-width
+            />
+          </div>
+          <p
+            v-if="!hideText"
+            class="navLabel"
+          >
+            {{ $t('Settings.Settings') }}
+          </p>
+          <div class="navUnderline" />
         </div>
-        <p
-          v-if="!hideText"
-          class="navLabel"
-        >
-          {{ $t('Settings.Settings') }}
-        </p>
       </router-link>
       <router-link
         class="navOption mobileHidden"
@@ -180,22 +201,25 @@
         to="/about"
         :title="$t('About.About')"
       >
-        <div
-          class="thumbnailContainer"
-        >
-          <FontAwesomeIcon
-            :icon="['fas', 'info-circle']"
-            class="navIcon"
-            :class="applyNavIconExpand"
-            fixed-width
-          />
+        <div class="navContainer">
+          <div
+            class="thumbnailContainer"
+          >
+            <FontAwesomeIcon
+              :icon="['fas', 'info-circle']"
+              class="navIcon"
+              :class="applyNavIconExpand"
+              fixed-width
+            />
+          </div>
+          <p
+            v-if="!hideText"
+            class="navLabel"
+          >
+            {{ $t("About.About") }}
+          </p>
+          <div class="navUnderline" />
         </div>
-        <p
-          v-if="!hideText"
-          class="navLabel"
-        >
-          {{ $t("About.About") }}
-        </p>
       </router-link>
       <hr>
       <div
@@ -209,30 +233,33 @@
           :title="channel.name"
           role="button"
         >
-          <div
-            class="thumbnailContainer"
-          >
-            <img
-              v-if="channel.thumbnail != null"
-              class="channelThumbnail"
-              height="35"
-              width="35"
-              loading="lazy"
-              :src="channel.thumbnail"
-              :alt="isOpen ? '' : channel.name"
+          <div class="navContainer">
+            <div
+              class="thumbnailContainer thumbnailChannelContainer"
             >
-            <FontAwesomeIcon
-              v-else
-              class="channelThumbnail noThumbnail"
-              :icon="['fas', 'circle-user']"
-            />
+              <img
+                v-if="channel.thumbnail != null"
+                class="channelThumbnail"
+                height="35"
+                width="35"
+                loading="lazy"
+                :src="channel.thumbnail"
+                :alt="isOpen ? '' : channel.name"
+              >
+              <FontAwesomeIcon
+                v-else
+                class="channelThumbnail noThumbnail"
+                :icon="['fas', 'circle-user']"
+              />
+            </div>
+            <p
+              v-if="isOpen"
+              class="navLabel"
+            >
+              {{ channel.name }}
+            </p>
+            <div class="navChannelUnderline" />
           </div>
-          <p
-            v-if="isOpen"
-            class="navLabel"
-          >
-            {{ channel.name }}
-          </p>
         </router-link>
       </div>
     </div>
